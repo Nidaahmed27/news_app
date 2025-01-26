@@ -47,6 +47,9 @@ export default class News extends Component {
             loading: false
         })
         this.props.setProgress(100);
+        console.log(parseddata);
+        console.log(parseddata.articles);
+
     }
     async componentDidMount() {
         this.updateNews()
@@ -113,7 +116,7 @@ export default class News extends Component {
             <div>
                 <div className="container my-3" >
 
-                    <h1 className='text-center'>{`News Monkey-Top ${this.props.category} Headlines`}</h1>
+                    <h1 className='text-center mt-5'>{`News Hub Top ${this.props.category} Headlines`}</h1>
                     {this.state.loading && < Spinner />}
                     <InfiniteScroll
                         dataLength={this.state.articles.length}
